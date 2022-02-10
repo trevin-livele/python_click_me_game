@@ -1,8 +1,96 @@
-.bg-dark {
-    background-color: #2DB293 !important;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-.nav-item  {
-    color: white !important;
-}
+        .bg-dark {
+            background-color: #2DB293 !important;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .nav-item {
+            color: white !important;
+        }
+        /* ******************************************/
+        /* *******Login Page  styling start here**** /
+        /********************************************/
+        
+        #formlogin {
+            background-color: #2DB293;
+            position: relative;
+            border-radius: 2%;
+        }
+        
+        .triangle {
+            border-top: 0;
+            border-bottom: 30px solid #2DB293;
+            border-left: 20px solid rgba(255, 255, 255, 0);
+            border-right: 20px solid rgba(255, 255, 255, 0);
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-image: linear-gradient(to bottom right, transparent 50%, #2DB293 0), linear-gradient(to top right, #2DB293 50%, transparent 0);
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            background-position: left, right;
+            border-radius: 20px;
+            transform: rotate(-0.6deg);
+            padding-bottom: 10px;
+            padding-left: 50%;
+            margin-top: -10%;
+            margin-left: 20%;
+            /* width: 337.53px;
+            height: 304.5px;
+            left: 30px;
+            top: 21.51px;
+            background: rgba(45, 178, 147, 0.6);
+            
+            */
+        }
+        
+        #legend {
+            padding-top: 150px;
+        }
+        
+        #legendtext {
+            color: #2DB293;
+        }
+        
+        .form-control {
+            background-color: #2DB293;
+        }
+        
+        .form-control :hover {
+            outline: #FFFFFF;
+            color: #FFFFFF;
+        }
+        
+        .custom-shape-divider-top-1644519923 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        
+        .custom-shape-divider-top-1644519923 svg {
+            position: relative;
+            display: block;
+            width: calc(272% + 1.3px);
+            height: 236px;
+        }
+        
+        .custom-shape-divider-top-1644519923 .shape-fill {
+            fill: #FFFFFF;
+        }
+        
+        #formcontainer {
+            padding: 0px;
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            border: #FFFFFF;
+        }
+        /* ******************************************/
+        /* *******Login Page  styling end here****** /
+        /********************************************/

@@ -1,32 +1,44 @@
 {%extends 'base.html'%} {%block content%}
 
-<div class="row mt-5">
-    <legend class=" text-center mb-3">Sign In</legend>
-    <div class="col-md-6" style="max-width: 550px;margin:auto">
+<div class="row mt-4">
+    <legend id="legendtext" class=" text-center fw-bold mb-1">Sign In</legend>
+    <div class="col-md-6 col-sm-12 px-4" style="max-width: 550px;margin:auto">
         <img class="image w-100 h-100" style="min-width: 550px;margin:auto" src="{{url_for('static', filename='online-login.webp')}}" align="middle" />
     </div>
-    <div class="col-md-3 mx-3 shadow p-3 mb-5 mt-3 bg-body rounded">
-        <form action="" method="POST" class="needs-validation p-5" novalidate>
+    <div id="formcontainer" class="col-md-4 col-sm-12 mx-auto mx-4 shadow mb-5 mt-1 bg-body rounded">
+        <form action="" method="POST" class="needs-validation p-5 " novalidate id="formlogin">
             {{form.hidden_tag()}}
-            <legend class=" text-center mb-3">Login</legend>
-            <div class="form-group">
-                {% if form.username.errors %} {{form.username.label}}{{form.username(class="form-control is-invalid")}} {% for error in form.username.errors %}
+            <div class="custom-shape-divider-top-1644519923 ">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <legend id="legend" class=" text-left text-white fw-bold mt-2 mb-3">Login</legend>
+            <div class="triangle"></div>
+            <div class="form-group mt-2 text-white">
+                {% if form.username.errors %} {{form.username.label(class="form-control ")}}{{form.username(class="form-control is-invalid")}} {% for error in form.username.errors %}
                 <div class="invalid-feedback">
                     {{error}}
                 </div>
                 {% endfor %} {% else %} {{form.username.label}}{{form.username(class="form-control")}} {% endif %}
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2 text-white">
                 {% if form.password.errors %} {{form.password.label}}{{form.password(class="form-control is-invalid")}} {% for error in form.password.errors %}
                 <div class="invalid-feedback">
                     {{ error }}
                 </div>
                 {% endfor %} {% else %} {{form.password.label}}{{form.password(class="form-control")}} {% endif %}
             </div>
-            <div class="form-group">
-                {{form.submit(class="btn btn-primary mt-2")}}
-                <span class="text-muted">Do you have an account? <a href="#">Sign Up</a></span>
+            <div id="loginbtn" class="form-group mt-2 text-white  float-right ">
+                <span class="text-white"><span class="fw-bold px-1">Forgot password?</span> <a class=" text-white" href="#">Login</a>
+
+                </span> {{form.submit(class=" loginbtn btn btn-outline-secondary mt-2 float-end text-white")}}
             </div>
+            <div class="form-group mt-3">
+                <span class="bg-light p-1 rounded"><img class="icon" src="{{url_for('static', filename='google_brand_branding_logo_network_icon.png')}}" alt=""></span>
+                <span class="bg-light p-1 rounded"><img class="icon" src="{{url_for('static', filename='fb_logo_social media_icon.png')}}" alt=""></span>
+            </div>
+
         </form>
     </div>
 </div> {%endblock%}
