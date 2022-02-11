@@ -23,8 +23,8 @@
             border-left: 20px solid rgba(255, 255, 255, 0);
             border-right: 20px solid rgba(255, 255, 255, 0);
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             background-image: linear-gradient(to bottom right, transparent 50%, #2DB293 0), linear-gradient(to top right, #2DB293 50%, transparent 0);
             background-size: 50% 100%;
             background-repeat: no-repeat;
@@ -33,15 +33,8 @@
             transform: rotate(-0.6deg);
             padding-bottom: 10px;
             padding-left: 50%;
-            margin-top: -10%;
-            margin-left: 20%;
-            /* width: 337.53px;
-            height: 304.5px;
-            left: 30px;
-            top: 21.51px;
-            background: rgba(45, 178, 147, 0.6);
-            
-            */
+            margin-top: -9%;
+            margin-left: 9%;
         }
         
         #legend {
@@ -74,7 +67,7 @@
         .custom-shape-divider-top-1644519923 svg {
             position: relative;
             display: block;
-            width: calc(272% + 1.3px);
+            width: calc(292% + 1.3px);
             height: 236px;
         }
         
@@ -84,12 +77,26 @@
         
         #formcontainer {
             padding: 0px;
+            padding-top: 1%;
         }
         
         .icon {
             width: 20px;
             height: 20px;
             border: #FFFFFF;
+        }
+        
+        #alertmessage {
+            animation: hideAnimation 0s ease-in 2s;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes hideAnimation {
+            to {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
         }
         /* ******************************************/
         /* *******Login Page  styling end here****** /

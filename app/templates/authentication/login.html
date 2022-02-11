@@ -20,19 +20,19 @@
                 <div class="invalid-feedback">
                     {{error}}
                 </div>
-                {% endfor %} {% else %} {{form.username.label}}{{form.username(class="form-control")}} {% endif %}
+                {% endfor %} {% else %} {{form.username(class="form-control")}} {% endif %}
             </div>
             <div class="form-group mt-2 text-white">
                 {% if form.password.errors %} {{form.password.label}}{{form.password(class="form-control is-invalid")}} {% for error in form.password.errors %}
                 <div class="invalid-feedback">
                     {{ error }}
                 </div>
-                {% endfor %} {% else %} {{form.password.label}}{{form.password(class="form-control")}} {% endif %}
+                {% endfor %} {% else %} {{form.password(class="form-control")}} {% endif %}
             </div>
             <div id="loginbtn" class="form-group mt-2 text-white  float-right ">
-                <span class="text-white"><span class="fw-bold px-1">Forgot password?</span> <a class=" text-white" href="#">Login</a>
+                <span class="text-white"><span class="fw-bold ">Need an account?</span> <a class=" text-white" href="{{url_for('register')}}">Register</a>
 
-                </span> {{form.submit(class=" loginbtn btn btn-outline-secondary mt-2 float-end text-white")}}
+                </span> {{form.submit(class=" loginbtn btn btn-secondary mt-2 float-end text-white")}}
             </div>
             <div class="form-group mt-3">
                 <span class="bg-light p-1 rounded"><img class="icon" src="{{url_for('static', filename='google_brand_branding_logo_network_icon.png')}}" alt=""></span>
