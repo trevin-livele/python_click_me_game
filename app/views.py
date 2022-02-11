@@ -10,3 +10,7 @@ def homepage():
 def login():
     form=LoginForm()
     return render_template('authentication/login.html',form=form)
+
+@app.route('/signup')
+def register():
+    return render_template('authentication/register.html')
