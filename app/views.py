@@ -1,4 +1,4 @@
-from app import app,db
+from app import app,db,photos
 from flask import render_template
 from .forms import LoginForm,RegisterForm
 from flask import render_template,redirect,url_for,flash,request,abort
@@ -7,6 +7,7 @@ from flask_login import login_required,logout_user,login_user,current_user
 from app.models import model
 
 User= model.User
+
 @app.route('/')
 def homepage():
     db.create_all()
@@ -46,10 +47,29 @@ def register():
     return render_template('authentication/register.html',form = form)
 
 
-#account route
-@app.route('/account')
-def account():
-    return render_template('index.html')
+#account/profile route
+@app.route('/account/user/<uname>',methods=['POST', 'GET'])
+def account(uname):
+    user = User.query.filter_by(username = uname).first()
+
+    if user is None:
+        abort(404)
+
+    return render_template('profile/account.html', user = user)
+
+
+@app.route('/account/user/<uname>/update/pic',methods= ['POST'])
+@login_required
+def update_pic(uname):
+    user = User.query.filter_by(username = uname).first()
+    if 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        path = f'photos/{filename}'
+        user.profile_pic_path = path
+        db.session.commit()
+    return redirect(url_for('account',uname=uname))
+
+#account/profile route ending
 
 
 # logout route

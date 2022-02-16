@@ -101,3 +101,35 @@
         /* ******************************************/
         /* *******Login Page  styling end here****** /
         /********************************************/
+
+
+
+        /* ******************************************/
+        /* *******Account/Profile Page styling starts here****** /
+        /********************************************/
+
+        .photoSubmit {
+            background-color: #59B393 !important;
+            color: white;
+            margin-top: 3%;
+        }
+
+        .fileSubmit {
+            margin-top: 3%;
+            color: white !important;
+        }
+
+        .profileName {
+            font-family: 'Redressed', cursive;
+            margin-top: 2%;
+            font-size: 2.4rem !important;
+        }
+
+        .profileImage {
+            margin-top: 3%;
+        }
+
+
+        /* ******************************************/
+        /* *******Account/Profile Page styling ends here****** /
+        /********************************************/
