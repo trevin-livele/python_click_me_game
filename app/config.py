@@ -1,7 +1,4 @@
-from distutils.log import DEBUG
 import os
-
-
 class Config:
 
     #database uri from .env file
